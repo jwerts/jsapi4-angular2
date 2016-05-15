@@ -1,0 +1,14 @@
+@import url('https://js.arcgis.com/4.0beta3/esri/css/main.css');
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#viewDiv {
+  position: absolute;
+  top: 1em;
+  bottom: 1em;
+  right: 1em;
+  left: 1em;
+}
