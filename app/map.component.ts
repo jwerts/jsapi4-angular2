@@ -1,17 +1,18 @@
-import { Component, ElementRef, Output, EventEmitter } from 'angular2/core';
-import MapService from './map.service';
-import { MapView } from 'esri-mods';
+import { Component, ElementRef, Output, EventEmitter } from '@angular/core';
+import { MapService } from './map.service';
+import { MapView, Point, SpatialReference } from 'esri';
 
 @Component({
-    selector: 'esri-map',
-    template: '<div id="viewDiv"><ng-content></ng-content></div>',
-    providers: [MapService]
+  selector: 'esri-map',
+  template: '<div id="viewDiv" style="height:600px"><ng-content></ng-content></div>',
+  providers: [MapService]
 })
 export class MapComponent {
 
-  @Output() viewCreated = new EventEmitter();
+  @Output() 
+  viewCreated = new EventEmitter();
   
-  view: null;
+  view: MapView;
   
   constructor(private _service: MapService, private elRef:ElementRef) {}
   
@@ -19,8 +20,12 @@ export class MapComponent {
     this.view = new MapView({
       container: this.elRef.nativeElement.firstChild,
       map: this._service.map,
-      zoom: 10,
-      center: [-120.76, 37.93]
+      center: new Point({
+        x: -82.44,
+        y: 35.61,
+        spatialReference: new SpatialReference({ wkid: 4326 })
+      }),
+      zoom: 14
     });
     this.viewCreated.next(this.view);
   }

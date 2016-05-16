@@ -1,7 +1,8 @@
 <html>
   <head>
-    <link rel="stylesheet" href="css/main.css">
-    <title>ArcGIS JS API 4.0beta3 & Angular 2</title>
+    <title>jsapi4/angular2</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.0/esri/css/main.css">
+    <link rel="stylesheet" href="./app/styles/main.css">
 
     <!-- 1. Load libraries -->
     <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
@@ -15,13 +16,17 @@
         async: true
       };
    </script>
-    <script src="https://js.arcgis.com/4.0beta3/"></script>
+    <script src="https://js.arcgis.com/4.0/"></script>
+    <script src="node_modules/esri-system-js/dist/esriSystem.js"></script>
+    <script src="systemjs.config.js"></script>
   </head>
 
   <!-- 3. Display the application -->
-  <body>
-    <my-app>Loading...</my-app>
-    <script src="app/load.js"></script>
+  <body class="calcite">
+    <div class="container-fluid">
+      <my-app>Loading...</my-app>
+    </div>
+    <script src="./app/esriSystemLoad.js"></script>
   </body>
 
 </html>
