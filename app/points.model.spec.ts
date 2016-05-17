@@ -1,8 +1,47 @@
 import { PointsModel } from './points.model';
 
-describe('points model tests', function() {
-  it('should contsctruct it', function() {
-    var pointsModel = new PointsModel();
-    expect(pointsModel).toBeDefined();
+describe('PointsModel tests', function() {
+  var mockPoint = {
+    attributes: {
+      index: 0
+    },
+    geometry: {
+      x: 1,
+      y: 2,
+      spatialReference: {
+        wkid: 4326
+      }
+    }
+  };
+
+  var pointsModel;
+  beforeEach(function() {
+    pointsModel = new PointsModel();
   });
+  
+  it('should contstruct it', function() {
+    expect(pointsModel).toBeDefined();
+    expect(pointsModel.getPointGraphics()).toBeDefined();
+  });
+  
+  describe("adding and removing points", function() {
+    it('should add a point to collection', function() {
+       pointsModel.addPoint(mockPoint);
+       pointsModel.addPoint(mockPoint);
+       expect(pointsModel.getPointGraphics().length).toEqual(2);
+    });
+    
+    it('should add points to collection', function() {
+      pointsModel.addPoints([mockPoint, mockPoint]);
+      expect(pointsModel.getPointGraphics().length).toEqual(2);
+    });
+    
+    it('should clear points', function() {
+      pointsModel.addPoint(mockPoint);
+      pointsModel.addPoint(mockPoint);
+      pointsModel.clear();
+      expect(pointsModel.getPointGraphics().length).toEqual(0);
+    });
+  });
+ 
 });
