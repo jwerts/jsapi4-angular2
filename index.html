@@ -11,12 +11,8 @@
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
 
     <!-- 2. Configure SystemJS -->
-    <script>
-      window.dojoConfig = {
-        async: true
-      };
-   </script>
-    <script src="https://js.arcgis.com/4.0/"></script>
+    <script src="./app/bower_components/dojo/dojo.js"></script>
+    <script src="./app/dojoConfig.js"></script>
     <script src="node_modules/esri-system-js/dist/esriSystem.js"></script>
     <script src="systemjs.config.js"></script>
   </head>
@@ -26,7 +22,8 @@
     <div class="container-fluid">
       <my-app>Loading...</my-app>
     </div>
-    <script src="./app/esriSystemLoad.js"></script>
+    <script src="./app/esriLoadConfig.js"></script>
+    <script src="./app/esriSystemLoadBrowser.js"></script>
   </body>
 
 </html>

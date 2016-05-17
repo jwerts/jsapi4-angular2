@@ -1,4 +1,6 @@
-node_modules/*
+node_modules/
+bower_components/
 .vscode/*
+_test-output/
 *.js
 *.js.map
