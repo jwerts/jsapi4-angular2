@@ -1,0 +1,9 @@
+<div>
+  <h2>Points!</h2>
+  <p>Index Sum: {{pointsModel.getIndexSum()}}
+  <ul>
+    <li *ngFor="let point of points.toArray()">
+      <span>{{point.attributes.index}} ({{point.geometry.x | number:'.5-5'}},{{point.geometry.y | number:'.5-5'}})</span>
+    </li>
+  </ul>
+</div>
