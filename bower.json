@@ -17,8 +17,7 @@
     "tests"
   ],
   "dependencies": {
-    "esri": "arcgis-js-api#4.0.0",
-    "bootstrap": "^3.3.6"
+    "esri": "arcgis-js-api#4.0.0"
   },
   "resolutions": {
     "dojo": "v1.10.4/esri-3.14.0"
