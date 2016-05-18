@@ -4,6 +4,8 @@ Angular 2 / ESRI Javascript API 4.0 simple map with unit testing wired up.
 ```
 npm install
 npm start
+
+npm test
 ```
 
 Originally forked/derived from:
