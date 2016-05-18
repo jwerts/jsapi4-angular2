@@ -2,5 +2,5 @@ node_modules/
 bower_components/
 .vscode/*
 _test-output/
-*.js
+# *.js
 *.js.map
