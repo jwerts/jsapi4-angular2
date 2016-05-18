@@ -58,7 +58,7 @@ module.exports = function(config) {
       { pattern: 'bower_components/esri/**/*.*', included: false, watched: false },       
 
       // load dojoConfig so dojo knows where to "require" modules from
-      'app/dojoConfig.js',
+      'dojoConfigTest.js',
       
       // we need the actual dojo startup file for "requrire" to be defined
       'bower_components/dojo/dojo.js',
@@ -67,10 +67,10 @@ module.exports = function(config) {
       'node_modules/esri-system-js/dist/esriSystem.js',
       
       // load in our array of esri dependencies
-      appBase + 'esriLoadConfig.js',
+      'esriLoadConfig.js',
       
       // bootstrap in the modules using esri-system-js
-      appBase + 'esriSystemLoadTest.js', 
+      'esriSystemLoadTest.js', 
 
       // transpiled application & spec code paths loaded via module imports
       {pattern: appBase + '**/*.js', included: false, watched: true},
