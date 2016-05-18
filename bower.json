@@ -1,6 +1,6 @@
 {
   "name": "jsapi4angular2",
-  "description": "",
+  "description": "Testing angular 2 with esri jsapi 4",
   "main": "",
   "authors": [
     "Josh Werts <joshwerts@gmail.com>"
@@ -17,6 +17,10 @@
     "tests"
   ],
   "dependencies": {
-    "esri": "arcgis-js-api#4.0.0"
+    "esri": "arcgis-js-api#4.0.0",
+    "bootstrap": "^3.3.6"
+  },
+  "resolutions": {
+    "dojo": "v1.10.4/esri-3.14.0"
   }
 }

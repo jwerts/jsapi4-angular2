@@ -3,7 +3,7 @@ import { PointsModel } from './points.model';
 describe('PointsModel tests', function() {
   var mockPoint = {
     attributes: {
-      index: 0
+      index: 1
     },
     geometry: {
       x: 1,
@@ -41,6 +41,14 @@ describe('PointsModel tests', function() {
       pointsModel.addPoint(mockPoint);
       pointsModel.clear();
       expect(pointsModel.getPointGraphics().length).toEqual(0);
+    });
+  });
+  
+  describe('calculations', function() {
+    it('should calculate the sum of the index attributes', function() {
+      pointsModel.addPoints([mockPoint, mockPoint]);
+      var sum = pointsModel.getIndexSum();
+      expect(sum).toEqual(2);
     });
   });
  
