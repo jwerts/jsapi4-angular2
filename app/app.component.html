@@ -1,7 +1,9 @@
 <div>
   <esri-map #mapView (viewCreated)="onViewCreated()">
   </esri-map>
-  <button (click)="onAddClicked()">Add</button>
-  <button (click)="onClearClicked()">Clear</button>
+  <div style="margin-top:15px;">
+    <button (click)="onAddClicked()" style="width:150px;height:30px;">Add</button>
+    <button (click)="onClearClicked()" style="width:150px;height:30px;">Clear</button>
+  </div>
   <attribute-display></attribute-display>
 </div>
