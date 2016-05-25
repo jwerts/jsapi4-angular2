@@ -2,6 +2,8 @@
 declare module "esri" {
   export import Map = __esri.Map;
   export import MapView = __esri.MapView;
+  export import WebTileLayer = __esri.WebTileLayer;
+  export import Basemap = __esri.Basemap;
   export import Collection = __esri.Collection;
   export import Graphic = __esri.Graphic;
   export import GraphicsLayer = __esri.GraphicsLayer;

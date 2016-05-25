@@ -9,7 +9,9 @@
       'esri/geometry/Point',
       'esri/geometry/SpatialReference',
       'esri/symbols/SimpleMarkerSymbol',
-      'esri/Color'
+      'esri/Color',
+      'esri/layers/WebTileLayer',
+      'esri/Basemap'
     ], 
     outModuleName: 'esri',
     moduleNameOverrides: {
