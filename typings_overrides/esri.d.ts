@@ -1,3 +1,4 @@
+
 // declare module
 declare module "esri" {
   export import Map = __esri.Map;
