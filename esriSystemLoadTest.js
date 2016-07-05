@@ -2,7 +2,12 @@
 // into a System.js module called esri
 esriSystem.register(esriLoadConfig.modules, function () {
   console.log('loaded esri modules');
-}, {
-  outModuleName: esriLoadConfig.outModuleName,
-  moduleNameOverrides: esriLoadConfig.moduleNameOverrides
-});
+},
+{
+  maintainModuleNames: true
+}
+// {
+//   outModuleName: esriLoadConfig.outModuleName,
+//   moduleNameOverrides: esriLoadConfig.moduleNameOverrides
+// }
+);

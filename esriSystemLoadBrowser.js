@@ -8,7 +8,12 @@ esriSystem.register(esriLoadConfig.modules, function () {
   }, function (error) {
     console.log("Esri system error:", error);
   });
-}, {
-  outModuleName: esriLoadConfig.outModuleName,
-  moduleNameOverrides: esriLoadConfig.moduleNameOverrides
-});
+}, 
+{
+  maintainModuleNames: true
+}
+// {
+//   outModuleName: esriLoadConfig.outModuleName,
+//   moduleNameOverrides: esriLoadConfig.moduleNameOverrides
+// }
+);

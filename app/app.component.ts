@@ -3,7 +3,12 @@ import { MapComponent } from './map.component';
 import { AttributeComponent } from './attribute.component';
 import { PointsModel } from './points.model';
 
-import { Point, Graphic, SimpleMarkerSymbol, Color } from 'esri';
+//import { Point, Graphic, SimpleMarkerSymbol, Color } from 'esri';
+import Point from 'esri/geometry/Point';
+import Graphic from 'esri/Graphic';
+import SimpleMarkerSymbol from 'esri/symbols/SimpleMarkerSymbol';
+import Color from 'esri';
+
 
 @Component({
   directives: [MapComponent, AttributeComponent],

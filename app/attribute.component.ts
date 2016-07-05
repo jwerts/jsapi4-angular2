@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Graphic, Collection, Point } from "esri";
+//import { Graphic, Collection, Point } from "esri";
+import Graphic from 'esri/Graphic';
+import Collection from 'esri/core/Collection';
+import Point from 'esri/geometry/Point';
 
 import { PointsModel } from './points.model';
 
