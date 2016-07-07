@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 
-//import { Graphic, Point, GraphicsLayer, Collection } from 'esri';
 import Graphic from 'esri/Graphic';
-import Point from 'esri/geometry/Point';
 import GraphicsLayer from 'esri/layers/GraphicsLayer';
 import Collection from 'esri/core/Collection';
 
@@ -25,7 +23,7 @@ export class PointsModel {
   }
   clear() {
     this._points.removeAll();
-  }  
+  }
   getIndexSum() {
     let sum = 0;
     if (this._points !== null) {

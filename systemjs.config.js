@@ -19,9 +19,9 @@
     'rxjs':                       { defaultExtension: 'js' },
     'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
 
-    'esri': {
-      defaultExtension: 'js'
-    }
+    // 'esri': {
+    //   defaultExtension: 'js'
+    // }
   };
 
   var ngPackageNames = [

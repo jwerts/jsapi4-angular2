@@ -1,6 +1,6 @@
 import { Component, ElementRef, Output, EventEmitter } from '@angular/core';
 import { MapService } from './map.service';
-//import { MapView, Point, SpatialReference } from 'esri';
+
 import MapView from 'esri/views/MapView';
 import Point from 'esri/geometry/Point';
 import SpatialReference from 'esri/geometry/SpatialReference';
@@ -13,13 +13,13 @@ import SpatialReference from 'esri/geometry/SpatialReference';
 })
 export class MapComponent {
 
-  @Output() 
+  @Output()
   viewCreated = new EventEmitter();
-  
+
   view: MapView;
-  
-  constructor(private _service: MapService, private elRef:ElementRef) {}
-  
+
+  constructor(private _service: MapService, private elRef: ElementRef) {}
+
   ngOnInit() {
     this.view = new MapView({
       container: this.elRef.nativeElement.firstChild,

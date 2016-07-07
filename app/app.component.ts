@@ -3,11 +3,10 @@ import { MapComponent } from './map.component';
 import { AttributeComponent } from './attribute.component';
 import { PointsModel } from './points.model';
 
-//import { Point, Graphic, SimpleMarkerSymbol, Color } from 'esri';
 import Point from 'esri/geometry/Point';
 import Graphic from 'esri/Graphic';
 import SimpleMarkerSymbol from 'esri/symbols/SimpleMarkerSymbol';
-import Color from 'esri';
+import Color from 'esri/Color';
 
 
 @Component({
@@ -22,13 +21,13 @@ export class AppComponent implements OnInit {
   private _defaultSymbol: SimpleMarkerSymbol = new SimpleMarkerSymbol({
     style: 'circle',
     size: 12,
-    color: new Color("#000000")
+    color: new Color('#000000')
   });
-  constructor(private pointsModel:PointsModel) {
-    
+  constructor(private pointsModel: PointsModel) {
+
   }
   ngOnInit() {
-    
+
   }
   onClearClicked() {
     this.pointsModel.clear();
@@ -37,7 +36,7 @@ export class AppComponent implements OnInit {
     this._pointIndex++;
     this._pointLatitude += 0.001;
     this._pointLongitude += 0.001;
-    var g = new Graphic({
+    let g = new Graphic({
       geometry: new Point({
         x: this._pointLongitude,
         y: this._pointLatitude,
@@ -52,5 +51,5 @@ export class AppComponent implements OnInit {
   }
   onViewCreated() {
     console.log('view created');
-  }  
+  }
 }
