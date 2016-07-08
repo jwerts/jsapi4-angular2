@@ -5,3 +5,4 @@ _test-output/
 #app/**/*.js
 #app/**/*.js.map
 typings/
+npm-debug.log

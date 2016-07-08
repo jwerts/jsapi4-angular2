@@ -58,7 +58,8 @@ module.exports = function(config) {
       { pattern: 'bower_components/dgrid/**/*.*', included: false, watched: false },
       
       { pattern: 'bower_components/dijit/**/*.*', included: false, watched: false },
-      { pattern: 'bower_components/esri/**/*.*', included: false, watched: false },       
+      { pattern: 'bower_components/esri/**/*.*', included: false, watched: false },    
+      { pattern: 'bower_components/moment/**/*.js', included: false, watched: false },   
 
       // load dojoConfig so dojo knows where to "require" modules from
       'dojoConfigTest.js',
