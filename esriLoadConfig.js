@@ -10,11 +10,6 @@
       'esri/geometry/SpatialReference',
       'esri/symbols/SimpleMarkerSymbol',
       'esri/Color'
-    ],
-    maintainModuleNames: true
-    // outModuleName: 'esri',
-    // moduleNameOverrides: {
-    //   'esri/arcgis/utils': 'arcgisUtils'
-    // }
+    ]
   };
 }(window))

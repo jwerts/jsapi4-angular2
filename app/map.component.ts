@@ -18,12 +18,12 @@ export class MapComponent {
 
   view: MapView;
 
-  constructor(private _service: MapService, private elRef: ElementRef) {}
+  constructor(private mapService: MapService, private elementRef: ElementRef) {}
 
   ngOnInit() {
     this.view = new MapView({
-      container: this.elRef.nativeElement.firstChild,
-      map: this._service.map,
+      container: this.elementRef.nativeElement.firstChild,
+      map: this.mapService.map,
       center: new Point({
         x: -82.44,
         y: 35.61,

@@ -15,10 +15,10 @@ import Color from 'esri/Color';
   templateUrl: './app/app.component.html'
 })
 export class AppComponent implements OnInit {
-  private _pointIndex = 0;
-  private _pointLongitude = -82.43;
-  private _pointLatitude = 35.61;
-  private _defaultSymbol: SimpleMarkerSymbol = new SimpleMarkerSymbol({
+  private pointIndex = 0;
+  private pointLongitude = -82.43;
+  private pointLatitude = 35.61;
+  private defaultSymbol: SimpleMarkerSymbol = new SimpleMarkerSymbol({
     style: 'circle',
     size: 12,
     color: new Color('#000000')
@@ -33,19 +33,19 @@ export class AppComponent implements OnInit {
     this.pointsModel.clear();
   }
   onAddClicked() {
-    this._pointIndex++;
-    this._pointLatitude += 0.001;
-    this._pointLongitude += 0.001;
+    this.pointIndex++;
+    this.pointLatitude += 0.001;
+    this.pointLongitude += 0.001;
     let g = new Graphic({
       geometry: new Point({
-        x: this._pointLongitude,
-        y: this._pointLatitude,
+        x: this.pointLongitude,
+        y: this.pointLatitude,
         spatialReference: 4326
       }),
       attributes: {
-        index: this._pointIndex
+        index: this.pointIndex
       },
-      symbol: this._defaultSymbol
+      symbol: this.defaultSymbol
     });
     this.pointsModel.addPoint(g);
   }
