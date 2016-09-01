@@ -10,9 +10,9 @@
   var map = {
     'app':                        'app', // 'dist',
 
-    '@angular':                   'https://npmcdn.com/@angular', // sufficient if we didn't pin the version
-    'angular2-in-memory-web-api': 'https://npmcdn.com/angular2-in-memory-web-api', // get latest
-    'rxjs':                       'https://npmcdn.com/rxjs@5.0.0-beta.6',
+    '@angular':                   'https://unpkg.com/@angular', // sufficient if we didn't pin the version
+    'angular2-in-memory-web-api': 'https://unpkg.com/angular2-in-memory-web-api', // get latest
+    'rxjs':                       'https://unpkg.com/rxjs@5.0.0-beta.6',
     'esri':                       'http://js.arcgis.com/4.0/esri'
   };
 
@@ -38,7 +38,7 @@
   // Add map entries for each angular package
   // only because we're pinning the version with `ngVer`.
   ngPackageNames.forEach(function(pkgName) {
-    map['@angular/'+pkgName] = 'https://npmcdn.com/@angular/' + pkgName + ngVer;
+    map['@angular/'+pkgName] = 'https://unpkg.com/@angular/' + pkgName + ngVer;
   });
 
   // Bundled (~40 requests):
