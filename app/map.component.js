@@ -56,8 +56,7 @@ System.register(['@angular/core', './map.service', 'esri/views/MapView', 'esri/g
                 MapComponent = __decorate([
                     core_1.Component({
                         selector: 'esri-map',
-                        template: '<div id="viewDiv" style="height:600px"><ng-content></ng-content></div>',
-                        providers: [map_service_1.MapService]
+                        template: '<div id="viewDiv" style="height:600px"><ng-content></ng-content></div>'
                     }), 
                     __metadata('design:paramtypes', [map_service_1.MapService, core_1.ElementRef])
                 ], MapComponent);

@@ -1,4 +1,4 @@
-System.register(['@angular/core', './map.component', './attribute.component', './points.model', 'esri/geometry/Point', 'esri/Graphic', 'esri/symbols/SimpleMarkerSymbol', 'esri/Color'], function(exports_1, context_1) {
+System.register(['@angular/core', './points.model', 'esri/geometry/Point', 'esri/Graphic', 'esri/symbols/SimpleMarkerSymbol', 'esri/Color'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,18 +10,12 @@ System.register(['@angular/core', './map.component', './attribute.component', '.
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, map_component_1, attribute_component_1, points_model_1, Point_1, Graphic_1, SimpleMarkerSymbol_1, Color_1;
+    var core_1, points_model_1, Point_1, Graphic_1, SimpleMarkerSymbol_1, Color_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (map_component_1_1) {
-                map_component_1 = map_component_1_1;
-            },
-            function (attribute_component_1_1) {
-                attribute_component_1 = attribute_component_1_1;
             },
             function (points_model_1_1) {
                 points_model_1 = points_model_1_1;
@@ -78,7 +72,6 @@ System.register(['@angular/core', './map.component', './attribute.component', '.
                 };
                 AppComponent = __decorate([
                     core_1.Component({
-                        directives: [map_component_1.MapComponent, attribute_component_1.AttributeComponent],
                         selector: 'my-app',
                         templateUrl: './app/app.component.html'
                     }), 
