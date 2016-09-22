@@ -3,6 +3,7 @@
       modules: [
       'esri/Map',
       'esri/views/MapView',
+      //'esri/views/SceneView',
       'esri/core/Collection',
       'esri/layers/GraphicsLayer',
       'esri/Graphic',

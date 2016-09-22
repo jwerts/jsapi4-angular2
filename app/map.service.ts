@@ -1,12 +1,10 @@
-<<<<<<< HEAD
 import { Injectable, Inject } from '@angular/core';
-import { Map, GraphicsLayer, WebTileLayer, Basemap, Collection } from 'esri';
-=======
-import { Injectable } from '@angular/core';
 
 import Map from 'esri/Map';
 import GraphicsLayer from 'esri/layers/GraphicsLayer';
->>>>>>> master
+import WebTileLayer from 'esri/layers/WebTileLayer';
+import Basemap from 'esri/Basemap';
+import Collection from 'esri/core/Collection';
 
 import { PointsModel } from './points.model';
 

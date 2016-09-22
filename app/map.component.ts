@@ -2,6 +2,7 @@ import { Component, ElementRef, Output, EventEmitter } from '@angular/core';
 import { MapService } from './map.service';
 
 import MapView from 'esri/views/MapView';
+//import SceneView from 'esri/views/SceneView';
 import Point from 'esri/geometry/Point';
 import SpatialReference from 'esri/geometry/SpatialReference';
 
@@ -16,12 +17,14 @@ export class MapComponent {
   viewCreated = new EventEmitter();
 
   view: MapView;
+  //view: SceneView;
 
   constructor(private mapService: MapService,
               private elementRef: ElementRef) {}
 
   ngOnInit() {
     this.view = new MapView({
+    //this.view = new SceneView({
       container: this.elementRef.nativeElement.firstChild,
       map: this.mapService.map,
       center: new Point({
