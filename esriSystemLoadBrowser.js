@@ -10,6 +10,6 @@ esriSystem.register(esriLoadConfig.modules, function () {
   System.import('app/main').then(function () {
     console.log('app/main imported');
   }, function (error) {
-    console.log("Esri system error:", error);
+    console.log("System import error:", error);
   });
 });

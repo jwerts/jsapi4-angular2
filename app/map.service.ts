@@ -16,4 +16,3 @@ export class MapService {
     this.map.add(pointsModel.pointsLayer);
   }
 }
-
