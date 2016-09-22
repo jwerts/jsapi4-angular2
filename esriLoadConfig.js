@@ -12,10 +12,6 @@
       'esri/Color',
       'esri/layers/WebTileLayer',
       'esri/Basemap'
-    ], 
-    outModuleName: 'esri',
-    moduleNameOverrides: {
-      'esri/arcgis/utils': 'arcgisUtils'
-    }
+    ]
   };
 }(window))

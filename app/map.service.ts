@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import { Injectable, Inject } from '@angular/core';
 import { Map, GraphicsLayer, WebTileLayer, Basemap, Collection } from 'esri';
+=======
+import { Injectable } from '@angular/core';
+
+import Map from 'esri/Map';
+import GraphicsLayer from 'esri/layers/GraphicsLayer';
+>>>>>>> master
 
 import { PointsModel } from './points.model';
 
@@ -35,4 +42,3 @@ export class MapService {
     this.map.add(pointsModel.pointsLayer);
   }
 }
-

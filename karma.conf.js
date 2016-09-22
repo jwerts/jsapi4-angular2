@@ -22,15 +22,17 @@ module.exports = function(config) {
     },
     files: [
       // System.js for module loading
-      'node_modules/systemjs/dist/system-polyfills.js',
       'node_modules/systemjs/dist/system.src.js',
-      
+
       // Polyfills
-      'node_modules/es6-shim/es6-shim.js',
+      'node_modules/core-js/client/shim.js',
 
       // Reflect and Zone.js
       'node_modules/reflect-metadata/Reflect.js',
       'node_modules/zone.js/dist/zone.js',
+      'node_modules/zone.js/dist/long-stack-trace-zone.js',
+      'node_modules/zone.js/dist/proxy.js',
+      'node_modules/zone.js/dist/sync-test.js',
       'node_modules/zone.js/dist/jasmine-patch.js',
       'node_modules/zone.js/dist/async-test.js',
       'node_modules/zone.js/dist/fake-async-test.js',
@@ -43,8 +45,12 @@ module.exports = function(config) {
       {pattern: 'node_modules/@angular/**/*.js', included: false, watched: false},
       {pattern: 'node_modules/@angular/**/*.js.map', included: false, watched: false},
 
+      {pattern: 'systemjs.config.js', included: false, watched: false},
       'karma-test-shim.js',
+
       
+
+
       // ********* esri load ***********
       // must be able to serve these files for dojo require
       // NOTE: karma gives a cryptic error when 
@@ -55,7 +61,8 @@ module.exports = function(config) {
       { pattern: 'bower_components/dgrid/**/*.*', included: false, watched: false },
       
       { pattern: 'bower_components/dijit/**/*.*', included: false, watched: false },
-      { pattern: 'bower_components/esri/**/*.*', included: false, watched: false },       
+      { pattern: 'bower_components/esri/**/*.*', included: false, watched: false },    
+      { pattern: 'bower_components/moment/**/*.js', included: false, watched: false },   
 
       // load dojoConfig so dojo knows where to "require" modules from
       'dojoConfigTest.js',
@@ -71,6 +78,9 @@ module.exports = function(config) {
       
       // bootstrap in the modules using esri-system-js
       'esriSystemLoadTest.js', 
+      // ************ END esri load ***************
+
+
 
       // transpiled application & spec code paths loaded via module imports
       {pattern: appBase + '**/*.js', included: false, watched: true},

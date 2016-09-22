@@ -1,80 +1,55 @@
 /**
- * PLUNKER VERSION (based on systemjs.config.js in angular.io)
  * System configuration for Angular 2 samples
  * Adjust as necessary for your application needs.
  */
-(function(global) {
-
-  var ngVer = '@2.0.0-rc.1'; // lock in the angular package version; do not let it float to current!
-
-  //map tells the System loader where to look for things
-  var  map = {
-    'app':                        'app',
-
-    '@angular':                   'https://npmcdn.com/@angular', // sufficient if we didn't pin the version
-    'angular2-in-memory-web-api': 'https://npmcdn.com/angular2-in-memory-web-api', // get latest
-    'rxjs':                       'https://npmcdn.com/rxjs@5.0.0-beta.6',
-    'ts':                         'https://npmcdn.com/plugin-typescript@4.0.10/lib/plugin.js',
-    'typescript':                 'https://npmcdn.com/typescript@1.8.10/lib/typescript.js',
- };
-
-  //packages tells the System loader how to load when no filename and/or no extension
-  var packages = {
-    'app':                        { main: 'main.ts',  defaultExtension: 'ts' },
-    'rxjs':                       { defaultExtension: 'js' },
-    'angular2-in-memory-web-api': { defaultExtension: 'js' },
-  };
-
-  var ngPackageNames = [
-    'common',
-    'compiler',
-    'core',
-    'http',
-    'platform-browser',
-    'platform-browser-dynamic',
-    'router',
-    'router-deprecated',
-    'upgrade',
-  ];
-
-  // Add map entries for each angular package
-  // only because we're pinning the version with `ngVer`.
-  ngPackageNames.forEach(function(pkgName) {
-    map['@angular/'+pkgName] = 'https://npmcdn.com/@angular/' + pkgName + ngVer;
-  });
-
-  // Add package entries for angular packages
-  ngPackageNames.forEach(function(pkgName) {
-
-    // Bundled (~40 requests):
-    packages['@angular/'+pkgName] = { main: pkgName + '.umd.js', defaultExtension: 'js' };
-
-    // Individual files (~300 requests):
-    //packages['@angular/'+pkgName] = { main: 'index.js', defaultExtension: 'js' };
-  });
-
-  var config = {
-    // DEMO ONLY! REAL CODE SHOULD NOT TRANSPILE IN THE BROWSER
-    transpiler: 'ts',
-    typescriptOptions: {
-      tsconfig: true
+(function (global) {
+  System.config({
+    paths: {
+      // paths serve as alias
+      'npm:': 'https://npmcdn.com/'
     },
-    meta: {
-      'typescript': {
-        "exports": "ts"
+    // map tells the System loader where to look for things
+    map: {
+      'app': 'app', // 'dist',
+
+      // angular bundles
+      '@angular/core': 'npm:@angular/core@2.0.0/bundles/core.umd.js',
+      '@angular/common': 'npm:@angular/common@2.0.0/bundles/common.umd.js',
+      '@angular/compiler': 'npm:@angular/compiler@2.0.0/bundles/compiler.umd.js',
+      '@angular/platform-browser': 'npm:@angular/platform-browser@2.0.0/bundles/platform-browser.umd.js',
+      '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic@2.0.0/bundles/platform-browser-dynamic.umd.js',
+      '@angular/http': 'npm:@angular/http@2.0.0/bundles/http.umd.js',
+      '@angular/router': 'npm:@angular/router@3.0.0/bundles/router.umd.js',
+
+      // angular testing umd bundles
+      '@angular/core/testing': 'npm:@angular/core@2.0.0/bundles/core-testing.umd.js',
+      '@angular/common/testing': 'npm:@angular/common@2.0.0/bundles/common-testing.umd.js',
+      '@angular/compiler/testing': 'npm:@angular/compiler@2.0.0/bundles/compiler-testing.umd.js',
+      '@angular/platform-browser/testing': 'npm:@angular/platform-browser@2.0.0/bundles/platform-browser-testing.umd.js',
+      '@angular/platform-browser-dynamic/testing': 'npm:@angular/platform-browser-dynamic@2.0.0/bundles/platform-browser-dynamic-testing.umd.js',
+      '@angular/http/testing': 'npm:@angular/http@2.0.0/bundles/http-testing.umd.js',
+      '@angular/router/testing': 'npm:@angular/router@3.0.0/bundles/router-testing.umd.js',
+
+      // other libraries
+      'rxjs': 'npm:rxjs@5.0.0-beta.12',
+      'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
+
+      'esri': 'http://js.arcgis.com/4.0/esri'
+    },
+
+    // packages tells the System loader how to load when no filename and/or no extension
+    packages: {
+      app: {
+        main: './main.js',
+        defaultExtension: 'js'
+      },
+      rxjs: {
+        defaultExtension: 'js'
+      },
+      'angular2-in-memory-web-api': {
+        main: './index.js',
+        defaultExtension: 'js'
       }
-    },
-    map: map,
-    packages: packages
-  }
-
-  System.config(config);
-
+    }
+  });
 })(this);
-
-
-/*
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/
