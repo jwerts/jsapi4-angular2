@@ -8,8 +8,7 @@ import SpatialReference from 'esri/geometry/SpatialReference';
 
 @Component({
   selector: 'esri-map',
-  template: '<div id="viewDiv" style="height:600px"><ng-content></ng-content></div>',
-  providers: [MapService]
+  template: '<div id="viewDiv" style="height:600px"><ng-content></ng-content></div>'
 })
 export class MapComponent {
 
@@ -18,7 +17,8 @@ export class MapComponent {
 
   view: MapView;
 
-  constructor(private mapService: MapService, private elementRef: ElementRef) {}
+  constructor(private mapService: MapService,
+              private elementRef: ElementRef) {}
 
   ngOnInit() {
     this.view = new MapView({

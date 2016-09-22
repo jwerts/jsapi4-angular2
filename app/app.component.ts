@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MapComponent } from './map.component';
-import { AttributeComponent } from './attribute.component';
 import { PointsModel } from './points.model';
 
 import Point from 'esri/geometry/Point';
@@ -10,7 +8,6 @@ import Color from 'esri/Color';
 
 
 @Component({
-  directives: [MapComponent, AttributeComponent],
   selector: 'my-app',
   templateUrl: './app/app.component.html'
 })
