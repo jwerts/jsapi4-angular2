@@ -2,7 +2,7 @@ import { Component, ElementRef, Output, EventEmitter } from '@angular/core';
 import { MapService } from './map.service';
 
 import MapView from 'esri/views/MapView';
-//import SceneView from 'esri/views/SceneView';
+import SceneView from 'esri/views/SceneView';
 import Point from 'esri/geometry/Point';
 import SpatialReference from 'esri/geometry/SpatialReference';
 
