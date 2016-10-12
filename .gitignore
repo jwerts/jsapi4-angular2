@@ -1,6 +1,5 @@
 node_modules/
 bower_components/
-.vscode/*
 _test-output/
 app/**/*.js
 app/**/*.js.map
