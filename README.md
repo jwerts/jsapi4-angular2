@@ -1,4 +1,7 @@
 # jsapi4-angular2
+
+#### NOTE: Superceded by: https://github.com/jwerts/angular2-esri-play using webpack instead of SystemJS
+
 Angular 2 / ESRI Javascript API 4.0 simple map with unit testing wired up.
 
 [Live Demo](http://joshwerts.com/jsapi4-angular2)  
